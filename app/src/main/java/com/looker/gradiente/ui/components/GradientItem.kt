@@ -75,7 +75,7 @@ fun Modifier.gradientItemBackground(
 ): Modifier = composed {
     val state = updateTransition(targetState = selectedState(), label = "")
     val color by state.animateColor(label = "") {
-        if (it) MaterialTheme.colorScheme.primaryContainer
+        if (it) MaterialTheme.colorScheme.tertiaryContainer
         else MaterialTheme.colorScheme.secondaryContainer
     }
     val shape by state.animateFloat(label = "") {
